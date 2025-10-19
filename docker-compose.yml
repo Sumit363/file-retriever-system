@@ -1,0 +1,27 @@
+# For Bridge Mode
+# services:
+#   log-retriever:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     image: log-file-retriever:latest
+#     container_name: log-retriever
+#     ports:
+#       - "3000:3000"
+#     volumes:
+#       - ./db-data:/app/prisma/prisma
+#     restart: unless-stopped
+
+
+# For Host Mode
+services:
+  log-retriever:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: log-file-retriever:latest
+    container_name: log-retriever
+    network_mode: "host"
+    volumes:
+      - ./db-data:/app/prisma/prisma
+    restart: unless-stopped
