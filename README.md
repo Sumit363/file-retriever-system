@@ -1,3 +1,7 @@
+**I built this application for work purposes.
+**It eliminated the need to manually access each computer to retrieve log files.
+**The application uses SSH to connect to Linux machines, significantly saving time and effort.
+
 # Configuring the application
 - Add the .env file with the .env secrets in the main project dir.
 
